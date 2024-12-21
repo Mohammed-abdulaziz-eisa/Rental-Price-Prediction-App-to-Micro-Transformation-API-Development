@@ -10,7 +10,7 @@ The application follows a modular microservice architecture:
 app/
 ├── api/               # API endpoint definitions
 │   ├── prediction.py  # Prediction endpoints
-│   └── __pycache__/
+│   
 ├── config/            # Configuration management
 │   ├── __init__.py
 │   ├── logger.py

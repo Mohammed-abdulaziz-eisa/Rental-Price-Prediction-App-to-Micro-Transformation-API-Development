@@ -25,10 +25,10 @@ class LoggerSettings(BaseSettings):
         protected_namespaces=("settings_",),
     )
 
-    log_level: str
+    log_level: str = "INFO"
 
 
-def configure_logging(log_level: str) -> None:
+def configure_logging(log_level: str = "INFO") -> None:
     """
     Configure the logging for the application.
 
@@ -45,4 +45,9 @@ def configure_logging(log_level: str) -> None:
     )
 
 
-configure_logging(log_level=LoggerSettings().log_level)
+# Initialize logging
+try:
+    configure_logging(log_level=LoggerSettings().log_level)
+except Exception as e:
+    logger.warning(f"Failed to load logging configuration: {e}")
+    configure_logging(log_level="INFO")  # Fallback to default
