@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "rental price prediction app to micro transformation api development"
+version = "0.1.0"
+description = ""
+authors = ["0xnrous <0xnrous@gmail.com>"]
+license = "0xnrous"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+flask = "^3.1.0"
+wemake-python-styleguide = "^0.19.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
