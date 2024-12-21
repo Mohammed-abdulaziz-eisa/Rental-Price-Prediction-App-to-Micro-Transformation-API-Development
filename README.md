@@ -44,7 +44,7 @@ app/
 
 Clone the repository:
 ```bash
-git clone [[text](https://github.com/Mohammed-abdulaziz-eisa/Rental-Price-Prediction-App-to-Micro-Transformation-API-Development.git)]
+git clone https://github.com/Mohammed-abdulaziz-eisa/Rental-Price-Prediction-App-to-Micro-Transformation-API-Development.git
 cd Rental Price Prediction App to Micro Transformation API Development
 ```
 
@@ -155,6 +155,4 @@ The application includes basic monitoring endpoints:
 
 
 ## Contact
-[Mohamed-abdulaziz-eisa] - [mohamed.abdulaziz.eisa@gmail.com]
-
-Project Link: [[text](https://github.com/Mohammed-abdulaziz-eisa/Rental-Price-Prediction-App-to-Micro-Transformation-API-Development.git)] 
+Mohamed-abdulaziz-eisa - [mohamed.abdulaziz.eisa@gmail.com]
