@@ -8,9 +8,8 @@ to load a model, make predictions using the loaded model.
 import pickle as pk
 from pathlib import Path
 
-from loguru import logger
-
 from config import model_setting
+from loguru import logger
 
 
 class ModelInferenceService:
@@ -37,20 +36,17 @@ class ModelInferenceService:
     """
 
     def __init__(self) -> None:
-        """Initializes the model object"""
+        """Initialize the model object."""
         self.model = None
         self.model_path = model_setting.model_path
         self.model_name = model_setting.model_name
 
     def load_model(self) -> None:
         """
-        Function that loads the model from a pickle file if it exists
+        Load the model from a specified path.
 
-        Args:
-            None
-
-        Returns:
-             None
+        Raises:
+            FileNotFoundError: If the model file not exist at specified dir.
         """
         logger.info(
             f"checking the existance of the model config file at "
@@ -62,15 +58,10 @@ class ModelInferenceService:
         )
 
         if not model_path.exists():
-            raise FileNotFoundError('Model file does not exist!')
-            # logger.warning(
-            #     f"model not found at {self.model_path} "
-            #     f"building {self.model_name}",
-            # )
+            raise FileNotFoundError("Model file does not exist!")
 
         logger.info(
-            f"model {self.model_name} exists --> "
-            "loading model configuration file",
+            f"model {self.model_name} exists --> " "loading model configuration file",
         )
 
         with open(model_path, "rb") as model_file:
@@ -78,17 +69,18 @@ class ModelInferenceService:
 
     def predict(self, input_parameters: list) -> list:
         """
-        Function that makes a prediction using the loaded model
-        by passing input parameters
+        Make a prediction using the loaded model by passing input parameters.
 
-        Args:
-            input_parameters (list): list of input parameters for the model
+        Parameters
+        ----------
+        input_parameters : list
+            List of input parameters for the model
 
         Returns:
-            list: list of predicted values
+            list: The prediction result from the model.
         """
         logger.info(
             f"input parameters : {input_parameters} ",
             f"making prediction with model : {self.model}",
         )
-        return self.model.predict([input_parameters])
+        return self.model.predict([input_parameters]).tolist()

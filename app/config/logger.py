@@ -32,15 +32,11 @@ def configure_logging(log_level: str) -> None:
     """
     Configure the logging for the application.
 
-    Arg:
-        log_level (str): The log level to be set for the logger.
-
-    Returns:
-        None
+    parameters:
+    -----------
+    log_level: str
+        The log level to be set for the logger.
     """
-
-    # to remove the console output from loguru showing it only in the log file
-    # logger.remove()
     logger.add(
         "logs/app.log",
         rotation="1 week",
@@ -49,5 +45,4 @@ def configure_logging(log_level: str) -> None:
     )
 
 
-# intializing the setting an logging configure
 configure_logging(log_level=LoggerSettings().log_level)
