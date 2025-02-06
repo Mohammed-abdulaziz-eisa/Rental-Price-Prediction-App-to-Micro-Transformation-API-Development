@@ -23,3 +23,12 @@
 2025-01-30 16:13:01.852 | INFO     | services.model_inference:predict:82 - input parameters : [220, 2020, 6, 100, 200, 0, 1, 0, 0] 
 2025-01-30 16:13:05.229 | INFO     | services.model_inference:predict:82 - input parameters : [220, 2021, 6, 100, 200, 0, 1, 0, 0] 
 2025-01-30 16:13:09.911 | INFO     | services.model_inference:predict:82 - input parameters : [220, 2001, 6, 100, 200, 0, 1, 0, 0] 
+2025-01-30 22:26:15.457 | INFO     | services.model_inference:load_model:51 - checking the existance of the model config file at model/base_rf.pkl
+2025-01-30 22:26:15.457 | INFO     | services.model_inference:load_model:63 - model base_rf.pkl exists --> loading model configuration file
+2025-01-30 22:26:16.542 | INFO     | services.model_inference:load_model:51 - checking the existance of the model config file at model/base_rf.pkl
+2025-01-30 22:26:16.542 | INFO     | services.model_inference:load_model:63 - model base_rf.pkl exists --> loading model configuration file
+2025-02-06 11:40:06.037 | INFO     | services.model_inference:load_model:51 - checking the existance of the model config file at model/base_rf.pkl
+2025-02-06 11:40:06.037 | INFO     | services.model_inference:load_model:63 - model base_rf.pkl exists --> loading model configuration file
+2025-02-06 11:40:07.344 | INFO     | services.model_inference:load_model:51 - checking the existance of the model config file at model/base_rf.pkl
+2025-02-06 11:40:07.344 | INFO     | services.model_inference:load_model:63 - model base_rf.pkl exists --> loading model configuration file
+2025-02-06 11:40:21.127 | INFO     | services.model_inference:predict:82 - input parameters : [220, 2001, 6, 100, 200, 0, 1, 0, 0] 
